@@ -60,10 +60,24 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
-    public Fraction sum(Fraction other) {
-    	int sumNumerator = this.getNumerator() + other.getNumerator();
-    	int sumDenominator = this.getDenominator() + other.getDenominator();
-    	return new Fraction(sumNumerator, sumDenominator);
+    public Fraction subtraction(Fraction fraction){
+    	int newNumerator = getNumerator()*fraction.getDenominator() - getDenominator()*fraction.getNumerator();
+    	int newDenominator = getDenominator()*fraction.getDenominator();
+    	return new Fraction (newNumerator, newDenominator);
     }
+    
+    public Fraction sum(Fraction other) {
+	    int newNumerator, newDenominator = 0;
+	    
+	    if(this.getDenominator() == other.getDenominator()) {
+	        newNumerator = this.getNumerator() + other.getNumerator();
+	        newDenominator = getDenominator();
+	    }
+	    else {
+	        newNumerator = getNumerator()*other.getDenominator() + getDenominator()*other.getNumerator();
+	        newDenominator = getDenominator()*other.getDenominator();
+	    }
+	    return new Fraction(newNumerator, newDenominator);
+}
     
 }

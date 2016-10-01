@@ -35,11 +35,11 @@ public class FractionTest {
 
 	@Test
 	public void testSum() {
-		Fraction fraction = new Fraction(numerator, denominator);
-		Fraction otherFraction = new Fraction(5, 2); 
+		Fraction fraction = new Fraction(3, 2);
+		Fraction otherFraction = new Fraction(2, 2); 
 		Fraction sum = fraction.sum(otherFraction);
 		
-		assertEquals(sum.getNumerator(), numerator+5 );
-		assertEquals(sum.getDenominator(), denominator+2 );
+		assertEquals(3+2 , sum.getNumerator() );
+		assertEquals(2, sum.getDenominator()) ;
 	}
 }
