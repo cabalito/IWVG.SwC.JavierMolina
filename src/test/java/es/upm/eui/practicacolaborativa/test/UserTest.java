@@ -34,4 +34,9 @@ public class UserTest {
 		assertEquals(user.initials(), "A.");
 	}
 
+	@Test
+	public void testInitialWithFamilyName() {
+		User user = new User(number, name, familyName);
+		assertEquals(user.initialWithFamilyName(), "A.L");	
+	}
 }
