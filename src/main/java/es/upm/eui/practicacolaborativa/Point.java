@@ -42,4 +42,9 @@ public class Point {
         return "Point[" + x + "," + y + "]";
     }
     
+    public void sum(Point p){
+    	this.x = getX() + p.getX();
+    	this.y = getY() + p.getY();
+    }
+    
 }
