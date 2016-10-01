@@ -60,4 +60,10 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
+    public Fraction subtraction(Fraction fraction){
+    	int newNumerator = getNumerator()*fraction.getDenominator() - getDenominator()*fraction.getNumerator();
+    	int newDenominator = getDenominator()*fraction.getDenominator();
+    	return new Fraction (newNumerator, newDenominator);
+    }
+    
 }
