@@ -49,5 +49,13 @@ public class PointTest {
     public void testToString() {
         assertEquals("Point[2,3]", pt.toString());
     }
+    
+    @Test
+    public void testSum(){
+    	Point p = new Point(5,0);
+    	pt.sum(p);
+    	assertEquals(7, pt.getX());
+    	assertEquals(3, pt.getY());
+    }
 
 }
