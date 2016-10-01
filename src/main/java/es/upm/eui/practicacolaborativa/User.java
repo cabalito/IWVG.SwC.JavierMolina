@@ -34,6 +34,14 @@ public class User {
         return this.name + " " + this.familyName;
     }
 
+    public String initialWithFamilyName() {
+    	return String.format("%c.%c", initial(name), initial(familyName));
+    }
+    
+    private char initial(String word) {
+    	return Character.toUpperCase( word.charAt(0) );
+    }
+    
     public String initials() {
         return this.name.substring(0, 1) + ".";
     }
