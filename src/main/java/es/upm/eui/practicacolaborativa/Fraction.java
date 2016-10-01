@@ -60,4 +60,10 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
+    public Fraction sum(Fraction other) {
+    	int sumNumerator = this.getNumerator() + other.getNumerator();
+    	int sumDenominator = this.getDenominator() + other.getDenominator();
+    	return new Fraction(sumNumerator, sumDenominator);
+    }
+    
 }
