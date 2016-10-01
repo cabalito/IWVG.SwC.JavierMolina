@@ -39,4 +39,13 @@ public class FractionTest {
 		assertEquals(new Fraction(1,2).decimal(), f.subtraction(new Fraction(2,2)).decimal(), 0.0);
 	}
 
+	@Test
+	public void testSum() {
+		Fraction fraction = new Fraction(3, 2);
+		Fraction otherFraction = new Fraction(2, 2); 
+		Fraction sum = fraction.sum(otherFraction);
+		
+		assertEquals(3+2 , sum.getNumerator() );
+		assertEquals(2, sum.getDenominator()) ;
+	}
 }
