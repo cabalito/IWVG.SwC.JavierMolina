@@ -81,5 +81,12 @@ public class Fraction {
 	    return new Fraction(newNumerator, newDenominator);
     }
     
+    public Fraction division(Fraction other) {
+    	int numerador =0;
+    	numerador=getNumerator()*other.getDenominator();
+    	int denominador =0;
+    	denominador= getDenominator()*other.getNumerator();
+    	return new Fraction(numerador,denominador);
+    }
 
 }
