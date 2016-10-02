@@ -34,5 +34,12 @@ public class DecimalCollection {
         }
         return higher;
     }
-
+	
+	public double remove(int position) {
+		if (position < (size())) {
+			this.collection.remove(position);
+			return position;
+		} else
+			return -1;
+	}
 }
