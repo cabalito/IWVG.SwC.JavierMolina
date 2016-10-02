@@ -48,4 +48,16 @@ public class FractionTest {
 		assertEquals(3+2 , sum.getNumerator() );
 		assertEquals(2, sum.getDenominator()) ;
 	}
+	
+	@Test
+    public void divisionTest() {
+		
+    	Fraction fraction1 = new Fraction(3,9);
+    	Fraction fraction2= new Fraction(5,10);
+    	Fraction result = new Fraction(30,45);
+    	assertEquals(result.getNumerator(),fraction1.division(fraction2).getNumerator());
+     	assertEquals(result.getDenominator(),fraction1.division(fraction2).getDenominator());
+
+    }
+
 }
