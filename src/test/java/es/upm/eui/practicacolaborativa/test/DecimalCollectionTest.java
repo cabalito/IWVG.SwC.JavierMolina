@@ -36,4 +36,11 @@ public class DecimalCollectionTest {
 		assertEquals(collection.higher(), five, 0.01);
 	}
 
+	public void removeTest() {
+		DecimalCollection collection = new DecimalCollection();
+		collection.add(two);
+		collection.add(five);
+		assertEquals(collection.remove(3), -1, 0.01);
+	}
+
 }
